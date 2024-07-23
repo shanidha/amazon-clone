@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!----------------------------------------- Amazon Image Added For LOGO ----------------------------------------->
+    <link href="data:image/png;base64,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" rel="icon">
+     <!----------------------------------------- Amazon Title ----------------------------------------->
+    <title>Online Shopping India - Buy mobiles, laptops, cameras, books, watches, apparel, shoes and e-Gift Cards. Free Shipping &amp; Cash on Delivery Available.</title>
+      <!----------------------------------------- Style sheet added ----------------------------------------->
+    <link rel="stylesheet" href="style.css">
+      <!----------------------------------------- Using Font Awesome  ----------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<!-- <link rel="images" href="https://m.media-amazon.com/images/G/31/gno/sprites/nav-sprite-global-2x-reorg-privacy._CB600086755_.png"> -->
+</head>
+<body>
+        <!----------------------------------------- Header Body ----------------------------------------->
+        <!-----------------------------------------TOp  Navigation Bar----------------------------------------->
+        <header class="header"> 
+                <div class="container container-header" >
+                    <div class="container-logo border-white">
+                        <!----------------------------------------- Logo Amazon.in ----------------------------------------->
+                        <div class="logo">
+                    <!-- <img  style="height: 40px;width: 200px;"   src="images/amazon-white.png" alt=""> -->
+                            </div>
+                            <span class="dotin">.in</span>
+                        </div>
+                <!----------------------------------------- Address----------------------------------------->
+                    <div class="address-container border-white">
+                    
+                        <p class="deliver">Deliver to Suhara</p>
+                        <div class="location-logo">
+                            <img    src="images/location.svg" alt="">
+                            <p class="pin">Arangottu... 679532‌</p>
+                        </div>
+                    
+                    </div>
+
+                    <!----------------------------------------- Drop Down and Search Field  ----------------------------------------->
+                    <div class="search-container">
+                        <select name="" id="" class="search-select">
+                            <option value="">All </option>
+                            <option value="">Alexa Skills </option>
+                            <option value="">Amazon Devices </option>
+                            <option value="">Amazon Fashion </option>
+                            <option value="">Amazon Pharmacy </option>
+                            <option value="">Appliances </option>
+                            <option value="">Apps & Games </option>
+                            <option value="">Audible Audiobooks </option>
+                            <option value="">Baby </option>
+                            <option value="">Beauty </option>
+                            <option value="">Books </option>
+                            <option value="">Car & MotorBikes </option>
+                            <option value="">Amazon Fashion </option>
+                            <option value="">Clothing & Accessories </option>
+                            <option value="">Collectibles</option>
+                            <option value="">Computers & Accessories </option>
+                            <option value="">Deals </option>
+                            <option value="">Electronics </option>
+                            <option value="">Furnitures </option>
+                            <option value="">Garden & Outdoors </option>
+                            <option value="">Gift Cards </option>
+                            <option value="">Grocery & Gourmet Foods </option>
+                            <option value="">Health & Personal Care </option>
+                            <option value="">Home & Kitchen </option>
+                            <option value="">Industrial & Scientific </option>
+                            <option value="">Jwellery </option>
+                            <option value="">Kindle Store </option>
+                            <option value="">Luggage & Bags </option>
+                            <option value="">Luxury Beauty </option>
+                            <option value="">Movies & TV Shows </option>
+                            <option value="">MP3 Music </option>
+                            <option value="">Music </option>
+                            <option value="">Musical Instruments </option>
+                            <option value="">Office Products </option>
+                            <option value="">Pet Supplies </option>
+                            <option value="">Prime Video </option>
+                            <option value="">Shoes & Handbags </option>
+                            <option value="">Software </option>
+                            <option value="">Sports, Fitness & Outdoors </option>
+                            <option value="">Suscribe & Save </option>
+                            <option value="">Tools & Home Improvement </option>
+                            <option value="">Toys & Games </option>
+                            <option value="">Under $500 </option>
+                            <option value="">Video Games </option>
+                            <option value="">Watches </option>
+                        </select>
+                        <input type="text" class="search-input" placeholder="Search Amazon.in">
+                        <div class="search-icon">  <img    src="images/search-black.svg" alt=""></div>
+                    </div>
+                    <!----------------------------------------- LAnguage EN ----------------------------------------->
+                    <div class="language-container border-white">
+                        <div ><img class="image-lang" src="images/flag.png" alt=""></div>
+                        <p>EN</p>
+                        <div ><img class="arrow" src="images/grey.svg" alt=""></div>
+                    
+                    <!----------------------------------------- User Name ----------------------------------------->
+                    </div>
+                    <div class="account-container border-white">
+                        <p class="name">Hello,<span> Shanidha</span></p>
+                        <p class="account-list">Accounts & Lists<img class="arrow-account" src="images/grey.svg" alt=""></p>
+                    
+                    </div>
+                    <!----------------------------------------- Return Nav Bar ----------------------------------------->
+                    <div class="return-container border-white">
+                        <p class="name">Returns</p>
+                        <p class="account-list">& Orders</p>
+                    </div>
+                    <!----------------------------------------- Cart Number and Icon ----------------------------------------->
+                    <div class="cart-container border-white">
+                        <p class="num">11</p>
+                        <img class="cart-icon" src="images/cart.svg" alt="">
+                    
+                        <p class="cart">Cart</p>
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!----------------------------------------- Navigation Bar below header----------------------------------------->
+        <nav class="nav">
+            <!----------------------------------------- ALL Menu Bar----------------------------------------->
+            <div class="nav-container container ">
+                <ul>
+                    <li class="border-white" id="open-menu">    <!--This id used for showing menu items when clicking ALL-->
+                        <span class="open-nav">
+                            <i class="fa-solid fa-bars"></i>
+                            All
+                        </span>
+                    </li>
+                        <!----------------------------------------- OTHER MENU ITEMS----------------------------------------->
+                    <li class="border-white"><a href="#">Amazon miniTv</a></li>
+                    <li class="border-white"><a href="#">Sell</a></li>
+                    <li class="border-white"><a href="#">Amazon Pay</a></li>
+                    <li class="border-white"><a href="#">Gift Cards</a></li>
+                    <li class="border-white"><a href="#">AmazonBasics</a></li>
+                    <li class="border-white"><a href="#">Buy Again</a></li>
+                    <li class="border-white history-browse">
+                        <a href="#">Browsing History</a>
+                        <img class="arrow-account" src="images/grey.svg" alt="">
+                        <div class="history-hover">
+                            <!----------------------------------------- On Hovering Browising History----------------------------------------->
+                            <div class="browse-image">
+                        <!----------------------------------------- Images Added In Browising History and Title----------------------------------------->
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/414hQA0n94L._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">hardoll Solar Outdoor Round Bollard LED...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/31ejXwdvm9L._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">BELLA by Labella Women Fashion...</div>
+                                </span>
+                                <span>  
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/31ERlG4MwML._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">BELLA by Labella Women Fashion...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/31Mro958QzL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">Amazon Brand - Eden &amp; Ivy Women's Handbag</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/514KIGQYC+L._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">Kuber Industries Kitchen Set | Luxury Kitchen...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/51EourqmpoL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">Roseate Mosaic Super Soft Anti Skid...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/71zFFbjz9GL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">MAA HOME CONCEPT (40x60 cm Solid)...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/41flrj5RnlL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">Kuber Industries Kitchen Set | Cotton Border...</div>
+                                </span>
+                                <span>
+                                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/51Xb61KrWTL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">STATUS Polypropylene Striped Anti Skid...</div>
+                                </span>
+                                <span>
+                                    <img  class="nav-timeline-img"src="https://m.media-amazon.com/images/I/51zG5YX4SIL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                                    <div class="nav-timeline-asin-title">NYALKARAN Anti Skid Stylish Kitchen Floor...</div>
+                                </span>
+                            </div>
+                            <!----------------------------------------- Under dot Line ----------------------------------------->
+                            <div class="nav-timeline-line">
+                                <div class="nav-timeline-dot"></div>
+                            </div>
+                        <!----------------------------------------- Scroll Container----------------------------------------->
+                            <div class="scroll"> 
+                                <button class="scroll-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="border-white"><a href="#">Health,Household & Personal Care</a></li>
+                    
+                </ul>
+                <!----------------------------------------- Prime Image Downloaded----------------------------------------->
+                <div class="nav-right-img border-orange"><img class="prime" src="images/prime.jpg" alt=""></div>
+
+            </div>
+        </nav>
+        <!----------------------------------------- ALL SLIDE BAR NAVIGATION ----------------------------------------->
+        <div class="sidebar-container" id="sidebar-cntr-show">
+            <div class="sidebar-left">
+                <!----------------------------------------- ALL Items inside ----------------------------------------->
+                <div class="sidebar-top">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <h2>Hello, Shanidha</h2>
+                </div>
+            <div class="sidebar-wrap">
+                <div class="sidebar-items">
+                    <h2>Trending</h2>
+                    <p>Best Sellers</p>
+                    <p>New Releases</p>
+                    <p>Movers and Shakers</p>
+                    
+                </div>
+                <div class="sidebar-items">
+                    <h2>Digital Content and Devices</h2>
+                    <span><p>Echo & Alexa<i class="fa-solid fa-chevron-right"></i></p></span>
+                    <p>Fire TV<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Kindle E-Readers & eBooks<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Audible Audiobooks<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Amazon Prime Video<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Amazon Prime Music<i class="fa-solid fa-chevron-right"></i></p>
+                    
+                </div>
+                <div class="sidebar-items">
+                    <h2>Shop by Category</h2>
+                    <p>Mobiles, Computers<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>TV, Appliances, Electronics<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Men's Fashion<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Women's Fashion<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>See all<i class="fa-solid fa-chevron-down"></i></p>
+                    
+                </div>
+                <div class="sidebar-items">
+                    <h2>Programs & Features</h2>
+                    <p>Amazon Pay</p>
+                    <p>Gift Cards & Mobile Recharges<i class="fa-solid fa-chevron-right"></i></p>
+                    <p>Amazon Launchpad</p>
+                    <p>Handloom and Handicrafts</p>
+                    
+                    <p>See all<i class="fa-solid fa-chevron-down"></i></p>
+                    
+                </div>
+                <div class="sidebar-items">
+                    <h2>Help & Settings</h2>
+                    <p>Your Account</p>
+                    <p>Customer Service</p>
+                    <p>Sign Out</p>
+                
+                    
+                </div>
+            </div>
+            </div>
+            <button id="sidebar-close"> <i class="fa-solid fa-xmark"></i></button>
+        </div>
+    <!----------------------------------------- Sliding Images Main Body ----------------------------------------->
+    <section>
+        <div class="image-slider">
+            <div class="image-slider-list">
+                <div class="image-item"><img src="images/background.jpg" alt=""/> </div>
+                <div class="image-item"><img  src="images/background1.jpg" alt=""/></div>
+                <div class="image-item"><img src="images/background2.jpg" alt=""/></div>
+                <div class="image-item"><img  src="images/background3.jpg" alt=""/></div>
+                <div class="image-item"><img src="images/background4.jpg" alt=""/></div>
+                <div class="image-item"><img  src="images/background5.jpg" alt=""/></div>
+                <div class="image-item"><img  src="images/background6.jpg" alt=""/></div>
+                <div class="image-item"><img  src="images/background7.jpg" alt=""/></div>
+                <div class="image-item"><img  src="images/background8.jpg" alt=""/></div>
+                            
+                        
+            </div>
+            <!----------------------------------------- Scroll BUTTON ON Sliding Images Main Body ----------------------------------------->
+            <div class="image-btn"> 
+                <button class="btn-cntr" id="btn-cntr-left"><i class="fa-solid fa-chevron-left icons"></i></button>
+                <button class="btn-cntr" id="btn-cntr-right"><i class="fa-solid fa-chevron-right"></i></div></button>
+            </div>
+        </div>
+    </section>
+
+        <!----------------------------------------- GRID IMAGES OF PRODUCTS(4 container in a row)----------------------------------------->
+    <main class="main">
+        <div class="product-card-container container">
+            <div class="product-card">
+                <!----------------------------------------- FIRST CONTAINER - Pick up ----------------------------------------->
+                <h2>Pick up where you left off</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/pick-skid.jpg" alt=""/><p>Kuber Industries...</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/pick-skid1.jpg" alt=""/>
+                        <p>Roseate Mosaic...</p> 
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/pick-skid2.jpg" alt=""/>
+                        <p>Kuber Industries... </p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/pick-skid4.jpg" alt=""/>
+                        <p>MAA Home Concept</p>
+                    </div>
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+            <!----------------------------------------- SECOND CONTAINER - KEEP SHOPPING ----------------------------------------->
+            <div class="product-card">
+                <h2>Keep shopping for</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/bag.jpg" alt=""/>
+                        <p>Women Top handle..</p>
+                        <p class="viewed">1 viewed</p> 
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/keep-skid.jpg" alt=""/>
+                        <p>Runners</p>
+                        <p class="viewed">1 viewed</p>  
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/keep-phone.jpg" alt=""/>
+                        <p>Smartphones &... </p>
+                        <p class="viewed">1 viewed</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/sheet.jpg" alt=""/>
+                        <p>Fitted Bedsheets</p>
+                        <p class="viewed">1 viewed</p> 
+                    </div>
+                </div>
+                <button class="grid-btn">View Your Browsing History</button>
+            </div>
+            <!----------------------------------------- THIRD CONTAINER -BUY AGAIN ----------------------------------------->
+            <div class="product-card">
+                <h2>Buy Again</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/buy1.jpg" alt=""/>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/buy2.jpg" alt=""/>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/buy3.jpg" alt=""/>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/buy4.jpg" alt=""/>
+                    </div>
+                </div>
+                <button class="grid-btn">More in Buy Again</button>
+            </div>
+            <!----------------------------------------- FOURTH CONTAINER - 2 ROW -----------------------------------------> 
+        <div class="grid-row">
+            <div class="grid-two-container">
+                <div class="grid-two">
+                    <div class="text">  
+                        <p> Save up to 28%<br> with GST<br> <span class="grid-btn">Register Now </span></p>
+                    </div>
+                    <img src="images/headset.jpg" alt=""/>
+                </div>
+            </div>
+            <div class="grid-two-container">
+                <div class="grid-phone">
+                    <img src="images/iphone.jpg" alt=""/>
+                </div>
+            </div>
+        </div>
+        </div>
+            <!----------------------------------------- Prime Card and Card Product----------------------------------------->
+        <div class="product-card-container container">
+            <!----------------------------------------- Prime Card  video and text----------------------------------------->
+            <div class="prime-card">
+                <img src="images/primeVideo.jpg" alt=""/>
+                <div class="prime-text">
+                    <div class="prime-text-column">
+                        <h2>Prime Video:Recommended for you</h2> 
+                        <p class="prime-p"> Force - Season 1 </p>
+                    </div>
+            
+                    <div class="prime-text-end"><p class="prime-p"></p> Start watching on Prime Video </p></div>
+        
+                </div>
+            </div>
+            <!----------------------------------------- 2 ROW Card Product Categories to explore----------------------------------------->
+            <div class="product-card">
+                <h2>Categories to explore</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/cat1.jpg" alt=""/>
+                        <p>Carpets</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/cat2.jpg" alt=""/>
+                        <p>Curtains & drapes</p>
+                    </div>
+                            
+                    <div class="card-grid">
+                        <img src="images/cat4.jpg" alt=""/>
+                        <p>Flat Bedsheets</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/cat3.jpg" alt=""/>
+                        <p>Place mats</p>
+                    </div>
+                </div>
+                <button class="grid-btn">Explore More</button>
+            </div>
+            <!----------------------------------------- 2 ROW Card Product Revamp Your home in style----------------------------------------->
+            
+            <div class="product-card">
+                <h2>Revamp Your home in style</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/re1.jpg" alt=""/><p>Cushio covers,sheets...</p></div>
+                        <div class="card-grid"><img src="images/re2.jpg" alt=""/><p>Figurnes,vases & more</p></div>
+                            <div class="card-grid"><img src="images/re3.jpg" alt=""/><p>Home Storage</p></div>
+                        
+                                <div class="card-grid"><img src="images/re4.jpg" alt=""/><p>Lighting Solutions</p>
+                    </div>
+                </div>
+                <button class="grid-btn">Explore all</button>
+            </div>
+        </div>
+            <!-----------------------------------------Related Items Container----------------------------------------->
+        <div class="container related-items-container">
+            <div class="related-items">
+                <h2>Related to items you've viewed <button class="grid-btn">See more</button></h2>
+                <div class="related-items-image">
+                    <img class="nav-timeline-img" src="images/spon.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/pick-skid.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/pick-skid1.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/pick-skid2.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/pick-skid4.jpg" alt="">
+                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/51EourqmpoL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/71zFFbjz9GL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/41flrj5RnlL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                    <img class="nav-timeline-img" src="https://m.media-amazon.com/images/I/51Xb61KrWTL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                    <img  class="nav-timeline-img"src="https://m.media-amazon.com/images/I/51zG5YX4SIL._SL500_AC_SS125_FMwebp_.jpg" alt="">
+                    
+                </div>
+                <div class="scroll-related"> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+                
+        <!-----------------------------------------Trending Fashion Container----------------------------------------->
+        <div class="container fashion-items-container">
+            <div class="related-items">
+                <h2>Up to 50% off | Trending fashion on women's clothing from local stores nearby   <button class="grid-btn">See all offers</button></h2>
+                <div class="fashion-items-image ">
+                    <img class="nav-timeline-img" src="images/women1.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women2.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women3.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women4.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women5.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women6.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/women7.jpg" alt="">
+                    <img  class="nav-timeline-img"src="images/women9.jpg" alt="">
+                <img  class="nav-timeline-img"src="images/women10.jpg" alt="">
+                </div>
+                <div class="scroll-related-left">
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-left"></i></button> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                    
+            </div>
+        </div>
+                
+        <!-----------------------------------------4 Grid  Container----------------------------------------->
+        <div class="product-card-container container">
+            <!-----------------------------------------4 Grid first Container----------------------------------------->
+            <div class="product-card">
+                <h2>Pick up where you left off</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/san1.jpg" alt=""/>
+                        <p>REFOAM OWRFM-O</p>
+                        <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 949</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/san2.jpg" alt=""/>
+                        <p>GLAMSTREET cork sa..</p>
+                        <p class="price">
+                            <i class="fa-solid fa-indian-rupee-sign"></i> 1,641</p> 
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/san3.jpg" alt=""/><p>REFOAM OWRFM-O </p><p class="price">
+                        <i class="fa-solid fa-indian-rupee-sign"></i> 949</p>
+                    </div>
+                    <div class="card-grid"><img src="images/san4.jpg" alt=""/><p>AFROJACK Womens</p><p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 848</p>
+                    </div>
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+            <!-----------------------------------------4 Grid second  Container----------------------------------------->
+            <div class="product-card">
+                <h2>Continue shopping for</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/bag1.jpg" alt=""/>
+                        <p>Amazon Brand - Eden</p>
+                        <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 699</p>
+                    </div>
+                        <div class="card-grid">
+                            <img src="images/bag2.jpg" alt=""/><p>ALIZA Women's Tote</p><p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 411</p>  </div>
+                            <div class="card-grid"><img src="images/bag3.jpg" alt=""/><p>Carrylux Large Capa..</p><p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 499</p>  
+                            </div>
+                            <div class="card-grid"><img src="images/bag4.jpg" alt=""/><p>LEGAL BRIDE Crock st</p><p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 569</p> 
+                    </div>
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+            <!-----------------------------------------4 Grid  third Container----------------------------------------->
+            <div class="product-card">
+                <h2>Keep shopping for</h2>
+                <div class="two-row">
+                    <div class="four-row">
+                        <img src="images/carpet1.1.jpg" alt=""/>
+                    </div>
+                    <div class="explain"> 
+                        <p>Roseate Nature Super Soft (40x60 cm) Microfibre 2000 GSM Bath Mat Super Absorbent Anti Skid..</p>
+                    </div>
+                    <div class="four-row-four">
+                        <div class="card-grid"><img  class="one-border" src="images/carpet1.1.jpg" alt=""/></div>
+                        <div class="card-grid"><img src="images/carpet1.2.jpg" alt=""/></div>
+                        <div class="card-grid"><img src="images/carpet1.3.jpg" alt=""/></div>
+                        <div class="card-grid"><img src="images/carpet1.4.jpg" alt=""/></div>
+                    </div>
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+            <!-----------------------------------------4 Grid fourth Container----------------------------------------->
+            <div class="product-card">
+                <h2>Prime Day 20th - 21st July |<br> Brands in focus</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/hp.jpg" alt=""/>
+                        <p>Up to 35% off | Intel core<br>Ultra laptops</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/one.jpg" alt=""/>
+                        <p>Oneplus smartphones |<br>Starting  <i class="fa-solid fa-indian-rupee-sign"></i> 18,999</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/wash.jpg" alt=""/><p>Up to 35% off | Samsung<br>Appliances</p>
+                    </div>
+                    <div class="card-grid"><img src="images/tv1.jpg" alt=""/><p>Up to 40% off | Samsung<br>Smart TVs</p></div>
+                </div>
+                <button class="grid-btn">See all offers</button>
+            </div>
+        </div>
+        <!-----------------------------------------KITCHEN  Container----------------------------------------->
+        <div class="container kitchen-items-container">
+            <div class="related-items">
+                <h2>Up to 60% off | Inverter batteries, kitchen tools & more from local stores nearby         <button class="grid-btn">See all offers</button></h2>
+                <div class="kitchen-items-image ">
+                    <img class="nav-timeline-img" src="images/kit1.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/kit2.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/kit3.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/kit4.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/kit5.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/kit6.jpg" alt="">
+                </div>
+                <div class="scroll-related-left">
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-left"></i></button> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+        <!-----------------------------------------Room/ Household Container----------------------------------------->
+        <div class="container fashion-items-container">
+            <div class="related-items">
+                <h2>Up to 70% off | Bestsellers from Indian artisans         <button class="grid-btn">See all offers</button></h2>
+                <div class="fashion-items-image ">
+                    <img class="nav-timeline-img" src="images/room1.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/room2.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/roo3.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/room4.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/room5.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/room6.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/room7.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/roo3.jpg" alt="">
+                </div>
+                <div class="scroll-related-left">
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-left"></i></button> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+
+                </div>
+                    
+            </div>
+        </div>
+        <!-----------------------------------------One Video Image Container----------------------------------------->
+        <div class="container video-card">
+            <img class="" src="images/video1.jpeg" alt=""/>
+        </div>
+        <!-----------------------------------------4 Grid  Container----------------------------------------->
+        <div class="product-card-container container">
+                <!----------------------------------------- with grid 4 images First Container----------------------------------------->
+            <div class="product-card">
+                <h2>More items to consider</h2>
+                <div class="two-row">
+                    <div class="four-row">
+                        <img src="images/more1.jpg" alt=""/>
+                    </div>
+                    
+                <div class="explain"> 
+                        <p>STATUS Polypropylene Striped Anti Skid Runner<br>for Living area | Rug for Bedroom |Rug for Dini..</p>
+                        <div class="price-container"> 
+                            <p class="price"><i class="fa-solid fa-indian-rupee-sign"></i> 215 </p>
+                            <p class="price-color">  M.R.P:   <i class="fa-solid fa-indian-rupee-sign"></i> <s>  999</s> </p>
+                        </div>
+                    </div>
+                    <div class="four-row-four">
+                        <div class="card-grid">  
+                            <img  class="one-border " src="images/more2.jpg" alt=""/>
+                        </div>
+                        <div class="card-grid">
+                            <img class="card-border" src="images/more3.jpg" alt=""/>
+                        </div>
+                        <div class="card-grid">
+                            <img class="card-border" src="images/more4.jpg" alt=""/>
+                        </div>
+                        <div class="card-grid">
+                            <img class="card-border" src="images/more5.jpg" alt=""/>
+                        </div>
+                    </div>
+            
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+                <!-----------------------------------------4 Grid second Container----------------------------------------->
+            <div class="product-card">
+                <h2>Minimum 50% off | Indoor<br>plants</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid-one">
+                        <img  src="images/min.jpg" alt=""/> 
+                    </div>
+                    
+                </div>
+                <button class="grid-btn">See more</button>
+            </div>
+                <!-----------------------------------------4 Grid third Container----------------------------------------->
+            <div class="product-card">
+                <h2>Zakir Khan's Chacha<br>Vidhayak Hain Humare |...</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid-one">
+                        <img  src="images/zaki.jpg" alt=""/> </div>
+                    
+                </div>
+                <button class="grid-btn">Check out other exciting shows on miniTv</button>
+            </div>
+                <!-----------------------------------------4 Grid fourth Container----------------------------------------->
+            <div class="product-card">
+                <h2>Best Sellers</h2>
+                <div class="crad-four-grid">
+                    <div class="card-grid">
+                        <img src="images/best1.jpg" alt=""/>
+                        <p>Up to 50% off | American<br>Tourister</p>
+                    </div>
+                    <div class="card-grid"><img src="images/best2.jpg" alt=""/>
+                        <p>Up to 60% off | Watches <br>& smartphones  <i class="fa-solid fa-indian-rupee-sign"></i> 18,999</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/best3.jpg" alt=""/>
+                        <p>Up to 60% off | Safari</p>
+                    </div>
+                    <div class="card-grid">
+                        <img src="images/best4.jpg" alt=""/>
+                        <p>Up to 60% off | Jewellery</p>
+                    </div>
+                </div>
+                <button class="grid-btn">See all offers</button>
+            </div>
+        </div>
+        <!-----------------------------------------Furniture  Container----------------------------------------->
+        <div class="container kitchen-items-container">
+            <div class="related-items">
+                <h2>Up to 50% off | Best offers on furniture from local stores nearby         <button class="grid-btn">See all offers</button></h2>
+                
+                <div class="kitchen-items-image ">
+                    <img class="nav-timeline-img" src="images/fur1.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur2.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur3.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur4.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur5.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur5.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur6.jpg" alt="">
+                    <img class="nav-timeline-img" src="images/fur7.jpg" alt="">
+                </div>
+                <div class="scroll-related-left">
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-left"></i></button> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                    
+            </div>
+        </div>
+        <!-----------------------------------------Amazon live  Container----------------------------------------->
+        <div class="container live-items-container">
+            <!-- <div class="live-items-h2"> <h2>Amazon LIVE - Watch, Chat & Shop LIVE        <button class="grid-btn">See more from Amazon Live</button></h2></div> -->
+
+        <!-----------------------------------------Video Using iFrame----------------------------------------->
+            <div class="live-items">
+            <div class="live-items-h2"> <h2>Amazon LIVE - Watch, Chat & Shop LIVE   <button class="grid-btn">See more from Amazon Live</button></h2></div>
+            <div class="live-video">
+                <iframe width="400" height="215" src="https://www.youtube.com/embed/3AMLPCl-7FA?si=I7fJOeh345IZ5XI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+                <!-----------------------------------------Phone Images Container----------------------------------------->
+                <div class="live-items-image ">
+
+                <div class="live">
+                    <img class="nav-timeline-img" src="images/phone1.jpg" alt=""/>
+                    <p class="large-live-price">Samsung Galaxy M35 5G<br>(Moonlight Blue,6GB<br>RAM,128GB Storage)...</p>
+                </div>
+                <div class="live">
+                    <img class="nav-timeline-img" src="images/phone2.jpg" alt=""/>
+                    <p class="large-live-price">Oneplus 12R (Cool Blue,<br>8 GB RAM ,128GB Storage)</p>
+                    <p class="live-price"><i class="fa-solid fa-indian-rupee-sign"></i> 39,998</p>
+                </div>
+                <div class="live"><img class="nav-timeline-img" src="images/phone3.jpg" alt=""/>
+                    <p class="large-live-price">Oneplus Nord CE4 Lite 5G<br>(Ultra Orange,8GB RAM,<br>128GB Storage)</p>
+                </div>
+                <div class="live"><img class="nav-timeline-img" src="images/phone4.jpg" alt=""/>
+                    <p class="large-live-price">iQOO Z9 Lite 5G (Aqua<br>flow,4GB RAM,128GB<br>Storage)</p>
+                </div>
+                
+                <div class="live"><img class="nav-timeline-img" src="images/phone5.jpg" alt=""/>
+                    <p class="large-live-price">iQOO Z9x 5G (Tornado<br>Green,4GB RAM,128GB<br>Storage) | Snapdargon 6...</p>
+                    <p class="live-price"><i class="fa-solid fa-indian-rupee-sign"></i> 12,999</p>
+                    <p class="live-price-grey"><i class="fa-solid fa-indian-rupee-sign"></i> <del>17,999</del></p>
+                </div>
+            
+                <div class="live"><img class="nav-timeline-img" src="images/phone6.jpg" alt=""/>
+                    <p class="large-live-price">realme NARZO 70 Pro 5G<br>(Glass Gold,8GB)...</p>
+                    <p class="live-price"><i class="fa-solid fa-indian-rupee-sign"></i> 19,998</p>
+                    <p class="live-price-grey"><i class="fa-solid fa-indian-rupee-sign"></i> <del>24,999</del></p>
+                </div>
+                </div>
+                <div class="scroll-related-left">
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-left"></i></button> 
+                    <button class="scroll-related-cntr" id="scroll-cntr-right"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                    
+            </div>
+        </div>
+        <!-----------------------------------------Best Deals   Container----------------------------------------->
+        <!-- <div class="discount-container">
+            <a href="#">Up to 52% off</a>
+            <a href="#">Deal of the day</a>
+
+        </div>
+        <p>adidas and campus foot wear </p> -->
+        <section class="today-deals-container">
+        
+            <div class="todays-deal-heading">
+                <h1>Today's Best Deals curated from stores nearby                                     </h1>
+                <p><a href="#">See all deals</a></p>
+            </div>
+            <div class="todays-deal-product-container">
+                <div class="todays-deal-btn-container">
+                    <button class="today-deal-btn" id="today-deal-btn-left"><i class="fa-solid fa-angle-left"></i></button>
+                    <button class="today-deal-btn" id="today-deal-btn-right"><i class="fa-solid fa-angle-right"></i></button>
+                </div>
+                <div class="todays-deal-product-list">
+                    <!-----------------------------------------Convert these html Container element using json Format  Container----------------------------------------->
+                    <!-- <div class="todays-list-product-item">
+                        <img src="images/deal1.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals2.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals3.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals4.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/delas5.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals6.jpg" alt=""/>
+                    
+                    </div> -->
+                    <!-- <div class="todays-list-product-item">
+                        <img src="images/deals7.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals8.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals9.jpg" alt=""/>
+                    
+                    </div> -->
+                    <!-- <div class="todays-list-product-item">
+                        <img src="images/deals10.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals11.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals12.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals14.jpg" alt=""/>
+                    
+                    </div>
+                    
+                    <div class="todays-list-product-item">
+                        <img src="images/deals15.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals19.jpg" alt=""/>
+                    
+                    </div>
+                    <div class="todays-list-product-item">
+                        <img src="images/deals20.jpg" alt=""/>
+                    
+                    </div> -->
+                </div>
+        
+            </div>
+        
+        </section>
+                <!----------------------------------------- Container Above Footer----------------------------------------->
+        <section>
+            <div class="footer-container">
+                <div class="footer-container-first">
+                    <p>Back to Top</p>
+                </div>
+                <!----------------------------------------- Container Contains Get to know us----------------------------------------->
+                <div class="footer-container-second">
+                    <div class="list-footer-items">
+                        <h2>Get to know<br>Us</h2>
+                        <div class="list-footer-items-name">
+                            <ul><a href="#">About Us</a></ul>
+                            <ul><a href="#">Careers</a></ul>
+                            <ul><a href="#">Press Releases</a></ul>
+                            <ul><a href="#">Amazon Science</a></ul>
+                        </div>
+                    </div>
+                    <div class="list-footer-items">
+                        <h2>Connect with<br>Us</h2>
+                        <div class="list-footer-items-name">
+                            <ul><a href="#">Facebook</a></ul>
+                            <ul><a href="#">Twitter</a></ul>
+                            <ul><a href="#">Instagram</a></ul>
+                        
+                        </div>
+                    </div>
+                    <div class="list-footer-items">
+                        <h2>Make Money with Us</h2>
+                        <div class="list-footer-items-name">
+                            <ul><a href="#">Sell on Amazon</a></ul>
+                            <ul><a href="#">Sell under Amazon<br>Accelerator</a></ul>
+                            <ul><a href="#">Protect and Build Your Brand</a></ul>
+                            <ul><a href="#">Amazon Global Selling</a></ul>
+                            <ul><a href="#">Become An Affliate</a></ul>
+                            <ul><a href="#">Fulfilment By Amazon</a></ul>
+                            <ul><a href="#">Advertise Your Products</a></ul>
+                            <ul><a href="#">Amazon Pay on Merchants</a></ul>
+                        </div>
+                    </div>
+                    <div class="list-footer-items">
+                        <h2>Let Us Help You</h2>
+                        <div class="list-footer-items-name">
+                            <ul><a href="#">COVID-19 and Amazon</a></ul>
+                            <ul><a href="#">Your Account</a></ul>
+                            <ul><a href="#">Returns Centre</a></ul>
+                            <ul><a href="#">Recalls and Product Safety<br>Alerts</a></ul>
+                            <ul><a href="#">100% Purchase Protection</a></ul>
+                            <ul><a href="#">Amazon Help Download</a></ul>
+                            <ul><a href="#">Help</a></ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="language-footer">
+                <div class="language-amazon">
+                    <img src="images/amazon-white.png" alt="">
+                </div>
+                    <div class="language-english">
+                        <i class="fa-solid fa-globe"></i>
+                        <p>English</p>
+                        <i class="fa-solid fa-up-down up-down"></i>
+                    </div>
+                    <div class="language-english">
+                        <img class="flag-language" src="images/flag.png" alt="">
+                        <p>India</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+        <!----------------------------------------- Footer Container----------------------------------------->
+    <footer>
+            <div class="footer-container-last">
+                <!-- <div class="footer-last"> -->
+                <div class="footer-last-row">
+                    <div class="footer-last-column-first">
+                    <a href="#" class="head-column"> AbeBooks<br>
+                        <span>Books, art<br> & collectibles</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                    <a href="#"class="head-column"> Amazon Web Services <br><span>Scalable Cloud<br> Computing Services</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                        <a href="#" class="head-column"> Audible<br><span> Download<br>Audio Books</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                        <a href="#"class="head-column"> IMDb<br><span> Movies, TV<br>& Celebrities</span></a>
+                    </div>
+                </div>
+                <div class="footer-last-row">
+                    <div class="footer-last-column-first">
+                        <a href="#" class="head-column"> Shopbop<br><span>Designer<br>Fashion Brands</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                    <a href="#"class="head-column"> Amazon Bussiness<br><span>Everything For<br>Your Bussiness</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                        <a href="#" class="head-column"> Prime Now<br><span> 2-Hour Delivery<br>on Everyday items</span></a>
+                    </div>
+                    <div class="footer-last-column-first">
+                        <a href="#"class="head-column"> Amazon Prime Music<br><span>100 million songs,ad-free<br>over 15 million podcast episodes</span></a>
+                    </div>
+                </div>
+                <div class="footer-last-column-second">
+                    <div class="footer-last-column-second-a">
+                        <a href="#">Conditions of Use & Sale</a>
+                        <a href="#"> Privacy Notice</a>
+                        <a href="#">Interest-Based Ads</a>
+                    </div>
+                    <p>© 1996-2024, Amazon.com, Inc. or its affiliates</p>
+
+                </div>
+            </div>
+
+        </footer>
+        <!----------------------------------------- Script Added ----------------------------------------->
+        <script src="javascript.js" type="module"></script>
+</body>
+</html>
